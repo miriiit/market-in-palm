@@ -1,0 +1,110 @@
+<div class="m-portlet">
+	<div class="m-portlet__body">
+		<div class="row m-row--no-padding m-row--col-separator-xl">
+			<div class="col-xl-12">
+				<form class="form-inline">
+					<div class="form-group">
+						<label class="label-control">Search movie:</label>
+						<input type="search" class="form-control" placeholder="Enter search string" [formControl]="searchField">
+					</div>
+				</form> 
+				<input type="button" value="Fetch boot" (click)="callAjax()" class="btn btn-primary"/>
+				<!-- <span >{{greeting | async}}</span> -->
+			</div>
+			<!-- <input type="text" #search/>
+			<input type="button" value="search" (click)="doSearch(search.value)" /> -->
+			<div class="col-xl-12">
+				<div  *ngFor="let item of results">
+					<span>{{item.name }}
+						</span>
+					</div>
+			</div> 
+		</div>
+	</div>
+	<div class="col-xl-12 row">
+	<div class="m-portlet col-xl-4">
+		<div class="m-portlet__body">
+				<div class="m-widget14">
+						<div class="m-widget14__header">
+							<h3 class="m-widget14__title">
+								Model Driven forms
+							</h3>
+							<span class="m-widget14__desc">
+							with modeling approach
+							</span>
+						</div>
+						<div class="row  align-items-center">
+
+						</div>
+				</div>
+			</div>
+	</div>
+	<div class="m-portlet col-xl-4">
+			<div class="m-portlet__body">
+					<div class="m-widget14">
+							<div class="m-widget14__header">
+								<h3 class="m-widget14__title">
+								Reactive Model forms
+								</h3>
+								<span class="m-widget14__desc">
+								with modeling approach
+								</span>
+							</div>
+							<div class="row  align-items-center">
+									<form novalidate>
+											<fieldset>
+											  <div class="form-group">
+												<label>First Name</label>
+												<input type="text"
+													   class="form-control">
+											  </div>
+										  
+											  <div class="form-group">
+												<label>Last Name</label>
+												<input type="text"
+													   class="form-control">
+											  </div>
+											</fieldset>
+										  
+											<div class="form-group">
+											  <label>Email</label>
+											  <input type="email"
+													 class="form-control">
+											</div>
+										  
+											<div class="form-group">
+											  <label>Password</label>
+											  <input type="password"
+													 class="form-control">
+											</div>
+										  
+											<div class="form-group">
+											  <label>Language</label>
+											  <select class="form-control">
+												<option value="">Please select a language</option>
+											  </select>
+											</div>
+										  </form>
+	
+							</div>
+					</div>
+				</div>
+	</div>
+	<div class="m-portlet col-xl-4">
+			<div class="m-portlet__body">
+					<div class="m-widget14">
+							<div class="m-widget14__header">
+								<h3 class="m-widget14__title">
+								Template Driven forms
+								</h3>
+								<span class="m-widget14__desc">
+								with modeling approach
+								</span>
+							</div>
+							<div class="row  align-items-center">
+	
+							</div>
+					</div>
+				</div>
+	</div>
+	</div>
