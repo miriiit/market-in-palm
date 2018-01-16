@@ -1,0 +1,72 @@
+<div class="row">
+<div class="m-portlet col-xl-6">
+        <div class="m-portlet__body">
+                <div class="">
+                        <div >
+                            <h3 class="">
+                             Model Driven forms
+                            </h3>
+                           
+                        </div>
+                        <div class="row  align-items-center">
+                                <form novalidate
+                                [formGroup]="myform" (ngSubmit)="onSubmit()">
+                                        <fieldset formGroupName="name">
+                                          <div class="form-group">
+                                            <label>First Name</label>
+                                            <input type="text" 
+                                                [ngClass]="{
+                                                    'has-danger': fname.invalid && (fname.dirty || fname.touched),
+                                                    'has-success': fname.valid && (fname.dirty || fname.touched)
+                                               }"
+                                                 class="form-control" formControlName="fname">
+                                          </div>
+                                      
+                                          <div class="form-group">
+                                            <label>Last Name</label>
+                                            <input type="text" [ngClass]="{
+                                                'badge-danger':lname.invalid && (lname.dirty || lname.touched),
+                                                'badge-success':lname.invalid && (lname.dirty || lname.touched)
+                                            }"
+                                                   class="form-control" formControlName="lname">
+                                          </div>
+                                          <div class="form-control-feedback" *ngIf="lname.errors && (lname.dirty || lname.touched)">
+                                                <p *ngIf="lname.errors.required">lname required</p>
+    
+                                            </div>
+                                        </fieldset>
+                                       
+                                      
+                                        <div class="form-group">
+                                          <label>Email</label>
+                                          <input type="email"
+                                                 class="form-control" formControlName="email">
+                                        </div>
+                                      
+                                        <div class="form-group">
+                                          <label>Password</label>
+                                          <input type="password"
+                                                 class="form-control" formControlName="pwd">
+                                        </div>
+                                      
+                                        <div class="form-group">
+                                          <label>Language</label>
+                                          <select class="form-control" formControlName="lang">
+                                            <option value="">Please select a language</option>
+                                            <option *ngFor="let lang of langs"
+                                            [value]="lang"> 
+                                            {{lang}} 
+                                            </option> 
+                                        </select>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Save Form</button>
+                                      </form>
+
+                        </div>
+                </div>
+            </div>
+</div>
+<div class="col-xl-6">
+        <pre>{{myform.value | json}}</pre>
+</div>
+</div>
