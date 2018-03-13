@@ -22,7 +22,7 @@ export class ThemeComponent implements OnInit {
             .then(result => {
                 Helpers.setLoading(false);
                 // optional js to be loaded once
-               // this._script.load('head', 'assets/vendors/custom/fullcalendar/fullcalendar.bundle.js');
+             //   this._script.load('head', 'assets/vendors/custom/fullcalendar/fullcalendar.bundle.js');
             });
         this._router.events.subscribe((route) => {
             if (route instanceof NavigationStart) {

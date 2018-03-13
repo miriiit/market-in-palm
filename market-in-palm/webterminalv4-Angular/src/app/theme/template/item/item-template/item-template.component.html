@@ -4,16 +4,17 @@
 						<div class="m-portlet__body">
 							<div class="m-widget26">
 								<div class="m-widget26__number">
-									{{item}}
+									{{item.price}}
 									<small>
 										All Transactions
 									</small>
 								</div>
-								<div class="m-widget26__chart" style="height:90px; width: 220px;"><div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
-							   
+								<div class="">
+							   <input type="button" class="btn btn-sm btn-outline-primary"  value="cart it" (click)="add_to_cart(item)" />
+							    <input type="button" class="btn btn-sm btn-outline-primary"  value="Remove it" (click)="rm_from_cart(item)" />
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
+</div>
 </div> <!-- col-xl-2 -->
