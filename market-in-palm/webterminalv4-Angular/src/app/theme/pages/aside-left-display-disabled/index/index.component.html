@@ -1,23 +1,56 @@
 <!-- BEGIN: Subheader -->
 <div class="m-subheader">
-	<div class="d-flex align-items-center">
-		<div class="mr-auto">
-			<h3 class="m-subheader__title">
-				Dashboard
-			</h3>
-		</div>
-		<div>
-			<span class="m-subheader__daterange" id="m_dashboard_daterangepicker">
+    <div class="d-flex align-items-center">
+        <div class="mr-auto">
+            <h3 class="m-subheader__title">
+                Dashboard
+            </h3>
+        </div>
+        <div>
+            <span class="m-subheader__daterange" id="m_dashboard_daterangepicker">
 				<span class="m-subheader__daterange-label">
 					<span class="m-subheader__daterange-title"></span>
-					<span class="m-subheader__daterange-date m--font-brand"></span>
-				</span>
-				<a href="#" class="btn btn-sm btn-brand m-btn m-btn--icon m-btn--icon-only m-btn--custom m-btn--pill">
-					<i class="la la-angle-down"></i>
-				</a>
-			</span>
-		</div>
-	</div>
+            <span class="m-subheader__daterange-date m--font-brand"></span>
+            </span>
+            <a href="#" class="btn btn-sm btn-brand m-btn m-btn--icon m-btn--icon-only m-btn--custom m-btn--pill">
+                <i class="la la-angle-down"></i>
+            </a>
+            </span>
+        </div>
+    </div>
 </div>
 <!-- END: Subheader -->
+
+<!-- <div class="row" *ngIf="user | async as u">
+    <span class="badge badge-primary">user name: {{u.username}} </span>
+</div> -->
 <app-item-list class="row"></app-item-list>
+
+<!-- <div class="row" *ngIf="items | async as i"> -->
+<!-- <span class="badge badge-primary">{{i.user.userid}}</span>
+    <span class="badge badge-primary">{{i.user.username}}</span>
+    <span class="badge badge-primary">{{i.user.email}}</span>
+    <span class="badge badge-primary">{{i.user.role}}</span> -->
+<!--  <div class="col-xl-2" *ngFor="let item of i.item_list"> -->
+<!-- [element]="item" -->
+<!-- <item-template></item-template> 
+  <div class="col-sm-12 col-md-12 col-lg-12">
+            <div class="m-portlet m-portlet--half-height m-portlet--border-bottom-success">
+                <div class="m-portlet__body">
+                    <!--  <app-item-list></app-item-list>-->
+<!--<div class="m-widget26">
+    <div class="m-widget26__number">
+        {{item.id}}
+        <small> {{item.title}} </small>
+    </div>
+    <div class="m-widget26__chart" style="height:90px; width: 220px;">
+        <div class="">
+
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div> -->

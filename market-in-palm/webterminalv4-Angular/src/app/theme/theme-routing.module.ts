@@ -7,12 +7,11 @@ const routes: Routes = [
     {
         "path": "",
         "component": ThemeComponent,
-      /*  "canActivate": [AuthGuard],*/
         "children": [
-             {
-                 "path": "index",
-                 "loadChildren": ".\/pages\/aside-left-display-disabled\/index\/index.module#IndexModule"
-             },
+            {
+                "path": "index",
+                "loadChildren": ".\/pages\/aside-left-display-disabled\/index\/index.module#IndexModule"
+            },
             {
                 "path": "inner",
                 "loadChildren": ".\/pages\/default\/inner\/inner.module#InnerModule"
@@ -26,22 +25,17 @@ const routes: Routes = [
                 "loadChildren": ".\/pages\/default\/not-found\/not-found.module#NotFoundModule"
             },
             {
-            	"path": "test",
-            	"loadChildren": ".\/pages\/default\/test-observable-list\/list.module#ListModule"
-            },
-            {
                 "path": "",
                 "redirectTo": "index",
                 "pathMatch": "full"
-            },
-            
+            }
         ]
     },
     {
         "path": "**",
         "redirectTo": "404",
         "pathMatch": "full"
-    },
+    }
 ];
 
 @NgModule({
